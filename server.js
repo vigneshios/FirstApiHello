@@ -32,13 +32,10 @@ app.use('/api',router);
     next(); //important to call
   });
 
-
-
 // Test Route
 router.get('/', function(req, res){
   res.json({message:'Welcome to our API!'});
 });
-
 
 router.route('/vehicles')
   .post(function(req, res) {
@@ -93,7 +90,6 @@ router.route('/vehicle/color/:color')
       res.json(vehicle);
     });
   });
-
 
 // Fire up server
 app.listen(port);
